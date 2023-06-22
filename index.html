@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equi="X-UA-Compatiable" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <p>Hi,I'm <span>Likhitha Devi</span> Dulla From India</p>
+            </div>
+        </div> 
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am Likhitha Devi.I had completed by Bachelor of Technology in Computer Science and Engineering
+                         at Chaitanya Engineering College in 2022.</p>
+                         <div class="tab-titles">
+                             <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                             <p class="tab-links" onclick="opentab('Education')"> Education</p>
+                         </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>Java</span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022</span><br>Btech</li>
+                                <li><span>2018</span><br>Intermediate</li>
+                                <li><span>2016</span><br>10th</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+             <div class="work-list">
+                 <div class="work">
+                     <img src="images/work1.webp">
+                 </div>
+                 <div class="work">
+                    <img src="images/work4.webp">
+                </div>
+                <div class="work">
+                    <img src="images/work5.webp">
+                </div>
+
+             </div>
+             <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+     <div class="container">
+         <div class="row">
+             <div class="contact-left">
+                 <h1 class="sub-title">Contact me</h1>
+                 <p><i class="fas fa-envelope"></i> abced@gmail.com</p>
+                 <p><i class="fas fa-phone"></i>123456789</p>
+                 <div class="social-icons">
+                     <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                     <a href=""><i class="fab fa-linkedin"></i></a>
+                 </div>
+                 <a href="" class="btn">Download CV</a>
+             </div>
+             <div class="contact-right">
+                 <form>
+                     <input type="text" name="Name" placeholder="Name" required>
+                     <input type="email" name="email" placeholder="Email" required>
+                     <textarea name="Message" rows="6" placeholder="Message" required></textarea>
+                     <button type="submit" class="btn btn2">submit</button>
+                 </form>
+             </div>
+         </div>
+     </div>
+    
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
